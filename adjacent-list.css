@@ -1,0 +1,42 @@
+/*html { background:silver; height:100%; overflow:auto; }*/
+body { margin:0; padding:1em 2em; font:small Verdana, sans-serif; background:white; }
+h1 { color:crimson; }
+h2 { color: #444; font-size: 1.3em; font-weight: normal }
+
+.adjacent-list { background:#ddd; border:1px solid #aaa; width: 80% }
+.adjacent-list { height:10.2em; }
+.adjacent-list:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+.adjacent-list div.wrapper, .adjacent-list ol { height:100%; }
+.adjacent-list div.wrapper { width:200%; }
+.adjacent-list ol {
+	background:white;
+	list-style:none;
+	padding:0; margin:0;
+	float:left; overflow:auto;
+  width: 12%;
+}
+.adjacent-list li { display:inline; white-space: nowrap }
+.adjacent-list span.parent { display:none; }
+.adjacent-list li.has-sublist a, .adjacent-list li.has-sublist span.class { background: #ffd; }
+.adjacent-list li.expand a, .adjacent-list li.expand span.class { background:gray; color:white; }
+.adjacent-list li.selected a, .adjacent-list li.selected span.class { background:crimson; color:white; }
+.adjacent-list a, .adjacent-list span.class {
+  display:block;
+  padding:0.2em 0.3em;
+  color:black;
+  text-decoration:none;
+  cursor:pointer;
+  position: relative;
+}
+.adjacent-list span.expand {
+  display: block; position: absolute; top:0; right: 0;
+  padding: 0 .2em;
+  font: bold 1.3em Verdana, sans-serif;
+  color: gray;
+}
+.adjacent-list li.expand span.expand { color: #444 }
+.adjacent-list li.selected span.expand { color: #eee }
+
+.adjacent-list span.class { color: #333; font-style: italic }
+.adjacent-list a:focus { outline:none; }
