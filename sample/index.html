@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
+    <title>Shrubbery demo</title>
     <link rel="stylesheet" href="../shrubbery.css" type="text/css" media="screen" />
     <script type="text/javascript" src="../prototype.js"></script>
     <script type="text/javascript" src="../shrubbery.js"></script>
     <script type="text/javascript">
       document.observe("dom:loaded", function() {
-        if (1) {
+        function bringShrubbery() {
           var list = new Shrubbery('index', 4)
           // list.effect = false
           
@@ -18,6 +19,12 @@
             }
           })
         }
+        $('index').insert({ before: '<a href="#" style="color:crimson">&raquo; Click here to make shrubbery</a>' })
+        $(document.body).down('a').observe('click', function(e) {
+          this.stopObserving().remove()
+          bringShrubbery()
+          e.stop()
+        })
       })
     </script>
   </head>

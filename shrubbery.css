@@ -1,6 +1,6 @@
 /*html { background:silver; height:100%; overflow:auto; }*/
 body { margin:0; padding:1em 2em; font:small Verdana, sans-serif; background:white; max-width: 70em }
-h1 { color:crimson; }
+h1 { color: #222; }
 h2 { color: #444; font-size: 1.3em; font-weight: normal }
 
 .adjacent-list { background:#ddd; border:1px solid #aaa; }
