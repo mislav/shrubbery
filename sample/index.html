@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
-    <link rel="stylesheet" href="../adjacent-list.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../shrubbery.css" type="text/css" media="screen" />
     <script type="text/javascript" src="../prototype.js"></script>
-    <script type="text/javascript" src="../adjacent-list.js"></script>
+    <script type="text/javascript" src="../shrubbery.js"></script>
     <script type="text/javascript">
       document.observe("dom:loaded", function() {
         if (1) {
-          var list = new AdjacentList('index', 4)
+          var list = new Shrubbery('index', 4)
           // list.effect = false
           
           list.wrapper.observe('click', function(e) {
@@ -22,7 +22,7 @@
     </script>
   </head>
   <body>
-    <h1>Adjacent list demo</h1>
+    <h1>Shrubbery demo</h1>
     
     <ol id='index'>
       <li><span class='class'>ActionController</span>
@@ -129,5 +129,7 @@
     </ol>
     
     <h2 id="msg">choose a class</h2>
+
+    <p style="font-size:85%; color: gray; text-align: right"><a href="http://github.com/mislav/shrubbery">Shrubbery</a> was made by <a href="http://mislav.caboo.se/">Mislav</a></p>
   </body>
 </html>

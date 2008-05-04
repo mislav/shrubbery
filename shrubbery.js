@@ -1,4 +1,4 @@
-var AdjacentList = Class.create({
+var Shrubbery = Class.create({
 	initialize: function (el) {
 		el = $(el);
     
@@ -21,7 +21,7 @@ var AdjacentList = Class.create({
     this.wrapper = list.wrap().addClassName('wrapper').makePositioned().setStyle({top:0, left:0})
 		el.makeClipping()
 
-    this.effect = new AdjacentList.SetStyleEffect(this.wrapper, {duration: .2})
+    this.effect = new Shrubbery.SetStyleEffect(this.wrapper, {duration: .2})
 		
 		// traverse nested lists and make a mess out of it
 		this.listSetup(list);
@@ -77,7 +77,7 @@ var AdjacentList = Class.create({
 			item.addClassName('expand');
       
       if (this.effect && !shifting) {
-        var fx = new AdjacentList.SetStyleEffect(item.sublist, {duration: .2})
+        var fx = new Shrubbery.SetStyleEffect(item.sublist, {duration: .2})
         item.sublist.setStyle({ opacity:0 }).show()
         fx.start({ opacity: 1 })
       }
@@ -112,7 +112,7 @@ var AdjacentList = Class.create({
 })
 
 // based on Bernie's Animator
-AdjacentList.Effect = Class.create({
+Shrubbery.Effect = Class.create({
   initialize: function(options) {
     this.options = Object.extend({
       interval: 20,
@@ -155,7 +155,7 @@ AdjacentList.Effect = Class.create({
   }
 })
 
-AdjacentList.SetStyleEffect = Class.create(AdjacentList.Effect, {
+Shrubbery.SetStyleEffect = Class.create(Shrubbery.Effect, {
   initialize: function($super, element, options) {
     $super(options)
     this.element = $(element)
