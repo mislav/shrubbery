@@ -51,7 +51,7 @@ var Shrubbery = Class.create({
 				
 				this.listSetup(li.sublist, level + 1);
         
-        var item = li.down('a') || li.down('span.class')
+        var item = li.down('a') || li.down('span')
         if (item) item.insert(' <span class="expand">&raquo;</span>')
 			}
 		}, this);

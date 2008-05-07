@@ -1,8 +1,3 @@
-/*html { background:silver; height:100%; overflow:auto; }*/
-body { margin:0; padding:1em 2em; font:small Verdana, sans-serif; background:white; max-width: 70em }
-h1 { color: #222; }
-h2 { color: #444; font-size: 1.3em; font-weight: normal }
-
 .adjacent-list { background:#ddd; border:1px solid #aaa; }
 .adjacent-list { height:10.3em; }
 .adjacent-list:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
@@ -18,10 +13,10 @@ h2 { color: #444; font-size: 1.3em; font-weight: normal }
 }
 .adjacent-list li { display:inline; white-space: nowrap }
 .adjacent-list span.parent { display:none; }
-.adjacent-list li.has-sublist a, .adjacent-list li.has-sublist span.class { background: #ffd; }
-.adjacent-list li.expand a, .adjacent-list li.expand span.class { background:gray; color:white; }
-.adjacent-list li.selected a, .adjacent-list li.selected span.class { background:crimson; color:white; }
-.adjacent-list a, .adjacent-list span.class {
+.adjacent-list li.has-sublist a, .adjacent-list li.has-sublist span.item { background: #ffd; }
+.adjacent-list li.expand a, .adjacent-list li.expand span.item { background:gray; color:white; }
+.adjacent-list li.selected a, .adjacent-list li.selected span.item { background:crimson; color:white; }
+.adjacent-list a, .adjacent-list span.item {
   display:block;
   padding:0.2em 0.3em;
   color:black;
@@ -38,5 +33,5 @@ h2 { color: #444; font-size: 1.3em; font-weight: normal }
 .adjacent-list li.expand span.expand { color: #444 }
 .adjacent-list li.selected span.expand { color: #eee }
 
-.adjacent-list span.class { color: #333; font-style: italic }
+.adjacent-list span.item { color: #333; font-style: italic }
 .adjacent-list a:focus { outline:none; }
